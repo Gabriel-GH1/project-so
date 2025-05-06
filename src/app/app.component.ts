@@ -6,7 +6,7 @@ import { FormularioComponent } from './formulario/formulario.component';
   selector: 'app-root',
   templateUrl: './app.component.html',
   styleUrl: './app.component.scss',
-  imports: [RouterOutlet, FormularioComponent]
+  imports: [FormularioComponent]
 })
 export class AppComponent {
   title = 'Simulador de Sistema Operacional';

@@ -1,50 +1,53 @@
-<form #userForm="ngForm" (ngSubmit)="onSubmit(userForm)">
-  <div>
-    <label for="nome">Nome do processo:</label>
+<form #userForm="ngForm" (ngSubmit)="onSubmit(userForm)" class="form">
+  <div class="form-group">
+    <label for="nome">Nome do processo</label>
     <input 
       type="text" 
       id="nome" 
       name="nome" 
       [(ngModel)]="userData.nome" 
       required
-      #nome="ngModel">
+      #nome="ngModel"
+      placeholder="Digite o nome do processo...">
       
     <div *ngIf="nome.invalid && (nome.dirty || nome.touched)">
       <small *ngIf="nome.errors?.['required']">O nome do processo é obrigatório</small>
     </div>
   </div>
 
-  <div>
-    <label for="numero">Número de chegada do processo:</label>
+  <div class="form-group">
+    <label for="numero">Número de chegada do processo</label>
     <input 
       type="text" 
       id="numero" 
       name="numero" 
       [(ngModel)]="userData.numero" 
       required
-      #numero="ngModel">
+      #numero="ngModel"
+      placeholder="Digite o número de chegada do processo...">
       
     <div *ngIf="numero.invalid && (numero.dirty || numero.touched)">
       <small *ngIf="numero.errors?.['required']">O número de chegada do processo é obrigatório</small>
     </div>
   </div>
 
-  <div>
-    <label for="duracao">Duração do processo:</label>
+  <div class="form-group">
+    <label for="duracao">Duração do processo</label>
     <input 
       type="text" 
       id="duracao" 
       name="duracao" 
       [(ngModel)]="userData.duracao" 
       required
-      #duracao="ngModel">
+      #duracao="ngModel"
+      placeholder="Digite a duração do processo...">
       
     <div *ngIf="duracao.invalid && (duracao.dirty || duracao.touched)">
       <small *ngIf="duracao.errors?.['required']">A duração do processo é obrigatória</small>
     </div>
   </div>
 
-  <button type="submit" [disabled]="!userForm.valid">Enviar</button>
+  <button type="submit" [disabled]="!userForm.valid">Enviar Respostas</button>
 </form>
 
 <div *ngIf="submitted">
