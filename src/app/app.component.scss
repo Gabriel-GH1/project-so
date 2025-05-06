@@ -1,0 +1,47 @@
+.main {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+  font-family: "Roboto", sans-serif;
+
+  .main-left {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 50%;
+    height: 100%;
+    background-color: #4e1a48;
+  }
+
+  .main-right {
+    display: flex;
+    flex-direction: column;
+    width: 50%;
+    height: 100%;
+    background-color: #ffffff;
+
+    .title {
+      text-align: left;
+      line-height: 0.5rem;
+      margin: 2rem;
+      
+      h1 {
+        font-weight: 700;
+        font-size: 3rem;
+      }
+      h2 {
+        font-weight: 300;
+        color: #5d5d5d;
+      }
+    }
+    .forms {
+      align-items: center;
+    }
+  }
+  .mobile-footer {
+    display: none;
+  }
+}
